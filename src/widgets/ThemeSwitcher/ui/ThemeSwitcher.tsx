@@ -19,7 +19,10 @@ const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ className = "" }) => {
             onClick={toggleTheme}
             theme={ButtonTheme.CLEAR}
         >
-            <ThemeSVG fill={theme === Theme.LIGHT ? "#1e2c60" : "#b5c8ff" } />
+            <ThemeSVG
+                className={css.themeSVG}
+                fill={theme === Theme.LIGHT ? "#1e2c60" : "#e6ecff" }
+            />
         </Button>
     );
 };
