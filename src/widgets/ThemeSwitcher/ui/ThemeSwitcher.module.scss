@@ -1,3 +1,10 @@
 .ThemeSwitcher {
     //
 }
+
+.themeSVG {
+    --themeSVG-size: 30px;
+
+    width: var(--themeSVG-size);
+    height: var(--themeSVG-size);
+}
