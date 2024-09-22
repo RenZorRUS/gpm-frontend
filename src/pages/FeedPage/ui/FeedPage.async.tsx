@@ -1,3 +1,3 @@
 import { lazy } from "react";
 
-export const FeedPageAsync = lazy(() => import('./FeedPage'));
+export const FeedPageAsync = lazy(() => import("./FeedPage"));

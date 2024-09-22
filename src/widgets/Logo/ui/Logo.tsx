@@ -8,11 +8,9 @@ interface LogoProps {
     className?: string;
 }
 
-export const Logo: FC<LogoProps> = ({className = ""}) => {
+export const Logo: FC<LogoProps> = ({ className = "" }) => {
     return (
-        <Button
-            className={classNames(css.Logo, {}, [className])}
-        >
+        <Button className={classNames(css.Logo, {}, [className])}>
             <LogoExtended className={css.logoSVG} />
             <div className={css.logoText}>GPM</div>
         </Button>

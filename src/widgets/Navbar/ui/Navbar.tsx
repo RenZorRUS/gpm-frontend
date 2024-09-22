@@ -7,10 +7,8 @@ interface NavbarProps {
     children?: ReactNode;
 }
 
-export const Navbar: FC<NavbarProps> = ({className = ""}) => {
+export const Navbar: FC<NavbarProps> = ({ className = "" }) => {
     return (
-        <div className={classNames(css.Navbar, {}, [className])}>
-            Navbar
-        </div>
+        <div className={classNames(css.Navbar, {}, [className])}>Navbar</div>
     );
 };

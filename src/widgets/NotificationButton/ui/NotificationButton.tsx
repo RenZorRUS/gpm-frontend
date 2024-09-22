@@ -10,7 +10,9 @@ interface NotificationButtonProps {
     className?: string;
 }
 
-export const NotificationButton: FC<NotificationButtonProps> = ({className = ""}) => {
+export const NotificationButton: FC<NotificationButtonProps> = ({
+    className = "",
+}) => {
     // todo: Implement drop-down notification menu
     const { active, toggleActive } = useActive();
 

@@ -6,27 +6,27 @@ import { FriendsPage } from "@/pages/FriendsPage";
 import { ProfilePage } from "@/pages/ProfilePage";
 
 interface RouteProps {
-    path: string,
-    element: ReactElement,
+    path: string;
+    element: ReactElement;
 }
 
 const enum AppRoutes {
-    MAIN = 'main',
-    FEED = 'feed',
-    CHATS = 'chats',
-    FRIENDS = 'friends',
-    PROFILE = 'profile',
-    ERROR = 'error',
+    MAIN = "main",
+    FEED = "feed",
+    CHATS = "chats",
+    FRIENDS = "friends",
+    PROFILE = "profile",
+    ERROR = "error",
 }
 
 const routePaths: Record<AppRoutes, string> = {
-    [AppRoutes.MAIN]: '/',
-    [AppRoutes.FEED]: '/feed',
-    [AppRoutes.CHATS]: '/chats/:id?',
-    [AppRoutes.FRIENDS]: '/friends',
-    [AppRoutes.PROFILE]: '/:username',
-    [AppRoutes.ERROR]: '*',
-}
+    [AppRoutes.MAIN]: "/",
+    [AppRoutes.FEED]: "/feed",
+    [AppRoutes.CHATS]: "/chats/:id?",
+    [AppRoutes.FRIENDS]: "/friends",
+    [AppRoutes.PROFILE]: "/:username",
+    [AppRoutes.ERROR]: "*",
+};
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
     [AppRoutes.MAIN]: {
@@ -53,4 +53,4 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
         path: routePaths.error,
         element: <ErrorPage />,
     },
-}
+};

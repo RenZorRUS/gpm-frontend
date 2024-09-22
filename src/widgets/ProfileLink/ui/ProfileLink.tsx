@@ -11,9 +11,9 @@ interface ProfileLinkProps {
     className?: string;
 }
 
-export const ProfileLink: FC<ProfileLinkProps> = ({className = ""}) => {
+export const ProfileLink: FC<ProfileLinkProps> = ({ className = "" }) => {
     // todo: Implement dropdown menu
-    const {active, toggleActive} = useActive();
+    const { active, toggleActive } = useActive();
 
     // todo: Fetch profile image & fallback image
 
@@ -29,9 +29,7 @@ export const ProfileLink: FC<ProfileLinkProps> = ({className = ""}) => {
                 src={ProfileImage}
                 alt="profile image"
             />
-            <ArrowSVG
-                className={css.profileLinkArrow}
-            />
+            <ArrowSVG className={css.profileLinkArrow} />
         </Button>
     );
 };
