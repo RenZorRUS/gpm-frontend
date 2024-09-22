@@ -1,8 +1,4 @@
-import {
-    DEFAULT_THEME,
-    Theme,
-    ThemeContext,
-} from "@/app/providers/theme/lib/ThemeContext.ts";
+import { defaultTheme, Theme, ThemeContext } from "@/app/providers/theme/lib/ThemeContext.ts";
 import { FC, ReactNode, useMemo, useState } from "react";
 
 interface ThemeProviderProps {
@@ -10,7 +6,7 @@ interface ThemeProviderProps {
 }
 
 const ThemeProvider: FC<ThemeProviderProps> = ({ children }) => {
-    const [theme, setTheme] = useState<Theme>(DEFAULT_THEME);
+    const [theme, setTheme] = useState<Theme>(defaultTheme);
 
     const defaultProps = useMemo(
         () => ({
@@ -20,11 +16,7 @@ const ThemeProvider: FC<ThemeProviderProps> = ({ children }) => {
         [theme],
     );
 
-    return (
-        <ThemeContext.Provider value={defaultProps}>
-            {children}
-        </ThemeContext.Provider>
-    );
+    return <ThemeContext.Provider value={defaultProps}>{children}</ThemeContext.Provider>;
 };
 
 export default ThemeProvider;
