@@ -1,10 +1,10 @@
 .ThemeSwitcher {
-    //
+    color: var(--secondary-icon-color);
+    height: var(--header-height);
+    width: var(--header-height);
 }
 
-.themeSVG {
-    --themeSVG-size: 30px;
-
-    width: var(--themeSVG-size);
-    height: var(--themeSVG-size);
+.themeSwitcherSVG {
+    width: var(--theme-switcher-size);
+    height: var(--theme-switcher-size);
 }

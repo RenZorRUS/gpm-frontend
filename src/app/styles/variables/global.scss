@@ -1,5 +1,5 @@
 :root {
-    --font-family-main: consolas, "Times New Roman", serif;
+    --font-family-main: "Noto Sans", sans-serif;
 
     --font-size-m: 16px;
     --font-line-m: 24px;
@@ -11,7 +11,18 @@
 
     // Sizes
     --layout-width: 1076px;
+    --layout-spacing: 15px;
 
-    // Component-specific sizes
-    --header-height: 50px;
+    // Colors
+    --primary-icon-color: #186ccd;
+    --secondary-icon-color: #939393;
+
+    // // Header
+    --header-height: 60px;
+    --header-border-width: 1px;
+    --header-controls-spacing: 30px;
+    --logo-size: 40px;
+    --notification-button-size: 25px;
+    --profile-link-image-size: 35px;
+    --theme-switcher-size: 40px;
 }

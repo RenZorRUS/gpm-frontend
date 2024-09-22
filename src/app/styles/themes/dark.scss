@@ -1,7 +1,11 @@
 .App.dark {
-    --bg-color-primary: #1b2447;
-    --bg-color-secondary: #32427a;
+    --bg-color-primary: #141414;
+    --bg-color-secondary: #222323;
+    --bg-color-accent: #424242;
 
-    --primary-color: #e6ecff;
-    --secondary-color: #8b96b8;
+    --color-separator: #292929;
+    --button-color-hover: rgba(255, 255, 255, 0.08); // white with 8% alpha
+
+    --primary-color: #e1e3e6;
+    --secondary-color: #828282;
 }

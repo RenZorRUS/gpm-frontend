@@ -1,15 +1,20 @@
 .headerWrapper {
     width: 100%;
     background-color: var(--bg-color-secondary);
+    border-bottom: var(--header-border-width) solid var(--color-separator);
 }
 
 .Header {
     width: var(--layout-width);
-    height: var(--header-height);
+    max-height: var(--header-height);
     margin: 0 auto;
 
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    justify-content: space-between;
+    gap: var(--header-controls-spacing);
+}
+
+.headerButtonContainer {
+    display: flex;
 }
