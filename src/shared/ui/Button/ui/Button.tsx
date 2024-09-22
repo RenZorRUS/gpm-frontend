@@ -4,17 +4,20 @@ import css from "./Button.module.scss";
 
 export const enum ButtonTheme {
     CLEAR = 'clear',
+    FILL = 'fill',
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
     theme?: ButtonTheme,
+    active?: boolean,
 }
 
 const Button: FC<ButtonProps> = (props) => {
     const {
         className = "",
-        theme = "",
+        active = false,
+        theme = ButtonTheme.CLEAR,
         children,
         ...restProps
     } = props;
@@ -22,7 +25,7 @@ const Button: FC<ButtonProps> = (props) => {
     return (
         <button
             type="button"
-            className={classNames(css.Button, {}, [className, css[theme]])}
+            className={classNames(css.Button, {[css.active]: active}, [className, css[theme]])}
             {...restProps}
         >
             {children}

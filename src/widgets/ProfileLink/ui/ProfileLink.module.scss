@@ -1,0 +1,20 @@
+.ProfileLink {
+    height: var(--header-height);
+    margin-left: auto;
+    padding: 0 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.profileLinkImage {
+    width: var(--profile-link-image-size);
+    height: var(--profile-link-image-size);
+    border-radius: 100%;
+}
+
+.profileLinkArrow {
+    color: var(--secondary-icon-color);
+}

@@ -1,0 +1,19 @@
+.Logo {
+    max-height: var(--logo-size);
+
+    display: flex;
+    flex-flow: row nowrap;
+    place-items: center;
+    gap: 10px;
+}
+
+.logoSVG {
+    color: var(--primary-icon-color);
+    width: var(--logo-size);
+}
+
+.logoText {
+    color: var(--primary-color);
+    padding-top: 2px; // minor tweak
+    font-size: var(--font-size-l);
+}

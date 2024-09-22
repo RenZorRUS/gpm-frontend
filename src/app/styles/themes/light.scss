@@ -1,7 +1,11 @@
 .App.light {
-    --bg-color-primary: #dfdffa;
-    --bg-color-secondary: #f6f6fb;
+    --bg-color-primary: #eceef1;
+    --bg-color-secondary: #fefffe;
+    --bg-color-accent: #edeef0;
 
-    --primary-color: #090b20;
-    --secondary-color: #3c5298;
+    --color-separator: #e7e8ec;
+    --button-color-hover: rgba(0, 0, 0, 0.08); // black with 8% alpha
+
+    --primary-color: #000000;
+    --secondary-color: #828282;
 }

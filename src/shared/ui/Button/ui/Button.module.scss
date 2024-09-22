@@ -7,3 +7,18 @@
     outline: none;
     background: none;
 }
+
+// todo: Decide what to do with repeating styles
+.fill {
+    border: none;
+    outline: none;
+    background: none;
+
+    &:hover {
+        background-color: var(--button-color-hover);
+    }
+
+    &.active {
+        background-color: var(--button-color-hover);
+    }
+}
