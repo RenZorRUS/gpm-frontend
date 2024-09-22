@@ -6,7 +6,19 @@ import tseslint from 'typescript-eslint'
 import react from "eslint-plugin-react";
 
 export default tseslint.config(
-    {ignores: ['dist']},
+    {
+        ignores: [
+            'dist',
+            '.next',
+            '.cache',
+            'package-lock.json',
+            'public',
+            'node_modules',
+            'next-env.d.ts',
+            'next.config.ts',
+            'yarn.lock',
+        ]
+    },
     {
         extends: [js.configs.recommended, ...tseslint.configs.recommended],
         files: ['**/*.{ts,tsx}'],

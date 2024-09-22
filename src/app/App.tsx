@@ -1,4 +1,4 @@
-import { AppRouter } from "./providers/router"
+import { AppRouter } from "./providers/router";
 import { classNames } from "@/shared/lib/helpers/classNames.ts";
 import { useTheme } from "@/app/providers/theme";
 import { Header } from "@/widgets/Header";
@@ -12,10 +12,10 @@ function App() {
             <Header />
             <div className="content-wrapper">
                 <Navbar />
-                <AppRouter className="content-page"/>
+                <AppRouter className="content-page" />
             </div>
         </div>
-    )
+    );
 }
 
-export default App
+export default App;

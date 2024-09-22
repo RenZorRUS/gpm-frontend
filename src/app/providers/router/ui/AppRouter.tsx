@@ -6,7 +6,7 @@ interface AppRouterProps {
     className?: string;
 }
 
-const AppRouter: FC<AppRouterProps> = ({className = ""}) => {
+const AppRouter: FC<AppRouterProps> = ({ className = "" }) => {
     return (
         // todo: Fallback
         <Suspense fallback={null}>

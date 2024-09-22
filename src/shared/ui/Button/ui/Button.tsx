@@ -3,14 +3,14 @@ import { classNames } from "@/shared/lib/helpers/classNames.ts";
 import css from "./Button.module.scss";
 
 export const enum ButtonTheme {
-    CLEAR = 'clear',
-    FILL = 'fill',
+    CLEAR = "clear",
+    FILL = "fill",
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
-    theme?: ButtonTheme,
-    active?: boolean,
+    theme?: ButtonTheme;
+    active?: boolean;
 }
 
 const Button: FC<ButtonProps> = (props) => {
@@ -25,7 +25,10 @@ const Button: FC<ButtonProps> = (props) => {
     return (
         <button
             type="button"
-            className={classNames(css.Button, {[css.active]: active}, [className, css[theme]])}
+            className={classNames(css.Button, { [css.active]: active }, [
+                className,
+                css[theme],
+            ])}
             {...restProps}
         >
             {children}
