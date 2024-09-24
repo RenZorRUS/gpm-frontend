@@ -10,7 +10,7 @@ interface RouteProps {
     element: ReactElement;
 }
 
-const enum AppRoutes {
+export const enum AppRoutes {
     MAIN = "main",
     FEED = "feed",
     CHATS = "chats",
@@ -19,7 +19,7 @@ const enum AppRoutes {
     NOT_FOUND = "not_found",
 }
 
-const routePaths: Record<AppRoutes, string> = {
+export const routePaths: Record<AppRoutes, string> = {
     [AppRoutes.MAIN]: "/",
     [AppRoutes.FEED]: "/feed",
     [AppRoutes.CHATS]: "/chats/:id?",
