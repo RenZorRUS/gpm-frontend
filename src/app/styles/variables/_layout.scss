@@ -1,0 +1,9 @@
+:root {
+    --layout-width: 1076px;
+    --layout-spacing: 15px;
+    --layout-calculated-top-padding: calc(
+            var(--header-height) +
+            var(--header-border-width) +
+            var(--layout-spacing)
+    ); // Determines the minimum height of the ".content-wrapper". Refer to "index.scss"
+}

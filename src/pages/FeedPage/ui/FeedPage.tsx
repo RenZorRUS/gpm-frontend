@@ -1,5 +1,10 @@
+// import { Loader } from "@/widgets/Loader"; // for testing
+
 const FeedPage = () => {
-    return <div>FeedPage</div>;
+    return (
+        <div>FeedPage</div>
+        // <Loader /> // for testing
+    );
 };
 
 export default FeedPage;

@@ -17,11 +17,7 @@
 .content-wrapper {
     width: var(--layout-width);
     margin: 0 auto;
-    min-height: calc(
-        100vh - var(--header-height) - var(--header-border-width) - var(
-                --layout-spacing
-            )
-    );
+    min-height: calc( 100vh - var(--layout-calculated-top-padding));
 
     display: flex;
     flex-flow: row nowrap;

@@ -1,0 +1,92 @@
+.Loader {
+    --default-loader-color: initial;
+    --default-loader-font-size: initial;
+    --default-loader-icon-size: 50px;
+    --default-loader-stroke-width: 2px;
+    --default-loader-animation-speed: 1s;
+
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    gap: 20px;
+
+    font: var(--font-l);
+    font-size: var(--loader-font-size, var(--default-loader-font-size));
+    color: var(--loader-color, var(--default-loader-color));
+}
+
+.loaderBody {
+    @mixin size {
+        width: var(--loader-icon-size, var(--default-loader-icon-size));
+        height: var(--loader-icon-size, var(--default-loader-icon-size));
+    }
+
+    @include size;
+    display: inline-block;
+    position: relative;
+
+    @mixin loaderRing {
+        @include size;
+        content: '';
+        box-sizing: border-box;
+        border-radius: 50%;
+        border:
+                var(--loader-stroke-width, var(--default-loader-stroke-width))
+                solid
+                currentColor;
+        position: absolute;
+        left: 0;
+        top: 0;
+        animation:
+                ripplesAnimation
+                var(--loader-animation-speed, var(--default-loader-animation-speed))
+                linear
+                infinite;
+    }
+
+    &:before, &:after {
+        // Both rings are given the same styles & animation
+        @include loaderRing;
+    }
+
+    &:after {
+        // Delay to the 2nd ring, for the "ripples" effect
+        animation-delay: calc(
+                var(--loader-animation-speed, var(--default-loader-animation-speed)) / 2
+        );
+    }
+}
+
+@keyframes ripplesAnimation {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.loaderMessage {
+    &:after {
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: bottom;
+        animation:
+                ellipsisAnimation
+                steps(4, end)
+                var(--loader-animation-speed, var(--default-loader-animation-speed))
+                infinite;
+        content: "\2026"; // ellipsis character
+        width: 0;
+    }
+}
+
+@keyframes ellipsisAnimation {
+    to {
+        width: 1em;
+    }
+}

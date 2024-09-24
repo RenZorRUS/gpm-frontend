@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { ChatsPage } from "@/pages/ChatsPage";
-import { ErrorPage } from "@/pages/ErrorPage";
+import { NotFoundPage } from "@/pages/NotFoundPage";
 import { FeedPage } from "@/pages/FeedPage";
 import { FriendsPage } from "@/pages/FriendsPage";
 import { ProfilePage } from "@/pages/ProfilePage";
@@ -10,22 +10,22 @@ interface RouteProps {
     element: ReactElement;
 }
 
-const enum AppRoutes {
+export const enum AppRoutes {
     MAIN = "main",
     FEED = "feed",
     CHATS = "chats",
     FRIENDS = "friends",
     PROFILE = "profile",
-    ERROR = "error",
+    NOT_FOUND = "not_found",
 }
 
-const routePaths: Record<AppRoutes, string> = {
+export const routePaths: Record<AppRoutes, string> = {
     [AppRoutes.MAIN]: "/",
     [AppRoutes.FEED]: "/feed",
     [AppRoutes.CHATS]: "/chats/:id?",
     [AppRoutes.FRIENDS]: "/friends",
     [AppRoutes.PROFILE]: "/:username",
-    [AppRoutes.ERROR]: "*",
+    [AppRoutes.NOT_FOUND]: "*",
 };
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
@@ -49,8 +49,8 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
         path: routePaths.profile,
         element: <ProfilePage />,
     },
-    [AppRoutes.ERROR]: {
-        path: routePaths.error,
-        element: <ErrorPage />,
+    [AppRoutes.NOT_FOUND]: {
+        path: routePaths.not_found,
+        element: <NotFoundPage />,
     },
 };

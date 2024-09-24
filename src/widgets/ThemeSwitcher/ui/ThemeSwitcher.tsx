@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Button } from "@/shared/ui/Button";
 import { classNames } from "@/shared/lib/helpers/classNames.ts";
-import { useTheme } from "@/app/providers/theme";
+import { useTheme } from "@/app/providers/ThemeProvider";
 import { ButtonTheme } from "@/shared/ui/Button/ui/Button.tsx";
 import ThemeSVG from "@/shared/assets/icons/theme.svg?react";
 import css from "./ThemeSwitcher.module.scss";
@@ -10,7 +10,7 @@ interface ThemeSwitcherProps {
     className?: string;
 }
 
-const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ className = "" }) => {
+export const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ className = "" }) => {
     const { toggleTheme } = useTheme();
 
     return (
@@ -23,5 +23,3 @@ const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ className = "" }) => {
         </Button>
     );
 };
-
-export default ThemeSwitcher;

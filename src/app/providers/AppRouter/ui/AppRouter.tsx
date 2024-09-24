@@ -1,6 +1,7 @@
 import { routeConfig } from "@/shared/config/routeConfig";
 import { Route, Routes } from "react-router-dom";
 import { FC, Suspense } from "react";
+import { Loader } from "@/widgets/Loader";
 
 interface AppRouterProps {
     className?: string;
@@ -8,16 +9,11 @@ interface AppRouterProps {
 
 const AppRouter: FC<AppRouterProps> = ({ className = "" }) => {
     return (
-        // todo: Fallback
-        <Suspense fallback={null}>
+        <Suspense fallback={<Loader />}>
             <div className={className}>
                 <Routes>
                     {Object.values(routeConfig).map((route) => (
-                        <Route
-                            key={route.path}
-                            path={route.path}
-                            element={route.element}
-                        />
+                        <Route key={route.path} path={route.path} element={route.element} />
                     ))}
                 </Routes>
             </div>

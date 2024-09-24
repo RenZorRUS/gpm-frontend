@@ -1,28 +1,28 @@
+@use 'colors';
+@use 'fonts';
+@use 'layout';
+
 :root {
-    --font-family-main: "Noto Sans", sans-serif;
-
-    --font-size-m: 16px;
-    --font-line-m: 24px;
-    --font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
-
-    --font-size-l: 24px;
-    --font-line-l: 32px;
-    --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
-
-    // Sizes
-    --layout-width: 1076px;
-    --layout-spacing: 15px;
-
-    // Colors
-    --primary-icon-color: #186ccd;
-    --secondary-icon-color: #939393;
-
-    // // Header
     --header-height: 60px;
     --header-border-width: 1px;
     --header-controls-spacing: 30px;
-    --logo-size: 40px;
-    --notification-button-size: 25px;
-    --profile-link-image-size: 35px;
-    --theme-switcher-size: 40px;
+
+    --logo-color: var(--primary-icon-color);
+
+    --loader-color: var(--primary-icon-color);
+    --loader-font-size: var(--font-size-l);
+    --loader-icon-size: 100px;
+    --loader-stroke-width: 4px;
+    --loader-animation-speed: 2s;
+
+
+    --error-message-color: red;
+    --error-message-icon-size: 200px;
+    --error-message-font-size: 40px;
+
+    // // Deprecated
+    // --logo-size: 40px;
+    // --notification-button-size: 25px;
+    // --profile-link-image-size: 35px;
+    // --theme-switcher-size: 40px;
 }

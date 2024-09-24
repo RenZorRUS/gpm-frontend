@@ -1,0 +1,28 @@
+.ErrorMessage {
+    --default-error-message-color: initial;
+    --default-error-message-icon-size: 200px;
+    --default-error-message-font-size: 40px;
+
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    font: var(--font-l);
+    font-size: var(--error-message-font-size, var(--default-error-message-font-size));
+}
+
+.errorMessageSVG {
+    height: var(--error-message-icon-size, var(--default-error-message-icon-size));
+    color: var(--error-message-color, var(--default-error-message-color));
+    transform: rotate(180deg);
+}
+
+.errorMessageButton {
+    --button-border: 3px solid currentColor;
+
+    padding: 10px 20px;
+    font-size: calc(var(--error-message-font-size, var(--default-error-message-font-size)) * 0.7);
+}
