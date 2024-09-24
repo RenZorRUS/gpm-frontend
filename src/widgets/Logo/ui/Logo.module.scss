@@ -1,19 +1,27 @@
 .Logo {
-    max-height: var(--logo-size);
+    --default-logo-color: #000000;
+
+    // todo: Changed the width & height to be responsive. Decide if it is the way to go
+    // max-height: var(--logo-size);
+    height: 100%;
+    aspect-ratio: 2 / 1;
 
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-flow: row nowrap;
-    place-items: center;
     gap: 10px;
 }
 
 .logoSVG {
-    color: var(--primary-icon-color);
-    width: var(--logo-size);
+    color: var(--logo-color, var(--default-logo-color));
+    // width: var(--logo-size);
+    width: 35%;
 }
 
 .logoText {
-    color: var(--primary-color);
-    padding-top: 2px; // minor tweak
+    // todo: Maybe just put the text into .svg too & stop wasting time on this?
+    padding-top: 3%; // minor tweak
     font-size: var(--font-size-l);
+    color: var(--primary-color);
 }

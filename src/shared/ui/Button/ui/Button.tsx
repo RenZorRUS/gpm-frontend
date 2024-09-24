@@ -5,6 +5,7 @@ import css from "./Button.module.scss";
 export const enum ButtonTheme {
     CLEAR = "clear",
     FILL = "fill",
+    SOLID = "solid",
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -13,27 +14,16 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     active?: boolean;
 }
 
-const Button: FC<ButtonProps> = (props) => {
-    const {
-        className = "",
-        active = false,
-        theme = ButtonTheme.CLEAR,
-        children,
-        ...restProps
-    } = props;
+export const Button: FC<ButtonProps> = (props) => {
+    const { className = "", active = false, theme = ButtonTheme.CLEAR, children, ...restProps } = props;
 
     return (
         <button
             type="button"
-            className={classNames(css.Button, { [css.active]: active }, [
-                className,
-                css[theme],
-            ])}
+            className={classNames(css.Button, { [css.active]: active }, [css[theme], className])}
             {...restProps}
         >
             {children}
         </button>
     );
 };
-
-export default Button;

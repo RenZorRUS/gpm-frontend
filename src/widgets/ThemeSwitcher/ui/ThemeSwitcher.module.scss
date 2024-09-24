@@ -1,10 +1,18 @@
 .ThemeSwitcher {
-    color: var(--secondary-icon-color);
-    height: var(--header-height);
-    width: var(--header-height);
+    // todo: Changed the width & height to be responsive. Decide if it is the way to go
+    // height: var(--header-height);
+    // width: var(--header-height);
+    height: 100%;
+    aspect-ratio: 1 / 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .themeSwitcherSVG {
-    width: var(--theme-switcher-size);
-    height: var(--theme-switcher-size);
+    // width: var(--theme-switcher-size);
+    // height: var(--theme-switcher-size);
+    width: 80%;
+    color: var(--secondary-icon-color);
 }

@@ -1,0 +1,16 @@
+.NotFoundPage {
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    font: var(--font-l);
+    font-size: 40px;
+}
+
+.notFoundPageSVG {
+    color: var(--logo-color);
+    width: 200px;
+}
