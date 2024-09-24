@@ -8,7 +8,6 @@ interface NavbarProps {
 }
 
 export const Navbar: FC<NavbarProps> = ({ className = "" }) => {
-    return (
-        <div className={classNames(css.Navbar, {}, [className])}>Navbar</div>
-    );
+    // todo: NAVBAR
+    return <div className={classNames(css.Navbar, {}, [className])}>Navbar</div>;
 };

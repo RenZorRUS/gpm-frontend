@@ -1,10 +1,18 @@
 .NotificationButton {
-    color: var(--secondary-icon-color);
-    height: var(--header-height);
-    width: var(--header-height);
+    // todo: Changed the width & height to be responsive. Decide if it is the way to go
+    // height: var(--header-height);
+    // width: var(--header-height);
+    height: 100%;
+    aspect-ratio: 1 / 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .notificationButtonSVG {
-    width: var(--notification-button-size);
-    height: var(--notification-button-size);
+    // width: var(--notification-button-size);
+    // height: var(--notification-button-size);
+    height: 50%;
+    color: var(--secondary-icon-color);
 }

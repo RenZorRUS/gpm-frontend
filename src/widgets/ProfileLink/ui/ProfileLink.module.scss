@@ -1,20 +1,22 @@
 .ProfileLink {
-    height: var(--header-height);
-    margin-left: auto;
-    padding: 0 10px;
+    // todo: Changed the width & height to be responsive. Decide if it is the way to go
+    // height: var(--header-height);
+    // padding: 0 10px;
+    height: 100%;
+    aspect-ratio: 1.44 / 1;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 7%; // was 5px
 }
 
 .profileLinkImage {
-    width: var(--profile-link-image-size);
-    height: var(--profile-link-image-size);
-    border-radius: 100%;
+    height: 70%;
+    border-radius: 50%;
 }
 
 .profileLinkArrow {
+    width: 16.67%;
     color: var(--secondary-icon-color);
 }

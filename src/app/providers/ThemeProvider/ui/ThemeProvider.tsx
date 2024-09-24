@@ -1,4 +1,4 @@
-import { defaultTheme, Theme, ThemeContext } from "@/app/providers/theme/lib/ThemeContext.ts";
+import { defaultTheme, Theme, ThemeContext } from "@/app/providers/ThemeProvider/lib/ThemeContext.ts";
 import { FC, ReactNode, useMemo, useState } from "react";
 
 interface ThemeProviderProps {

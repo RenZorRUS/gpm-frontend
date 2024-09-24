@@ -1,6 +1,6 @@
-import { AppRouter } from "./providers/router";
+import { AppRouter } from "./providers/AppRouter";
 import { classNames } from "@/shared/lib/helpers/classNames.ts";
-import { useTheme } from "@/app/providers/theme";
+import { useTheme } from "@/app/providers/ThemeProvider";
 import { Header } from "@/widgets/Header";
 import { Navbar } from "@/widgets/Navbar";
 
