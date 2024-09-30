@@ -6,5 +6,8 @@
     ],
     "*/**/*.{json,css,md}": [
         "prettier --write"
+    ],
+    "*": [
+        "jest"
     ]
 }

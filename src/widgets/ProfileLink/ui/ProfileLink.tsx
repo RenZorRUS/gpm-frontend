@@ -4,7 +4,6 @@ import { classNames } from "@/shared/lib/helpers/classNames.ts";
 import { Button } from "@/shared/ui/Button";
 import { useActive } from "@/shared/lib/hooks/useActive";
 import { ButtonTheme } from "@/shared/ui/Button/ui/Button.tsx";
-import ProfileImage from "@/shared/assets/images/default-profile-image.jpg";
 import ArrowSVG from "@/shared/assets/icons/arrow.svg?react";
 
 interface ProfileLinkProps {
@@ -19,6 +18,7 @@ export const ProfileLink: FC<ProfileLinkProps> = ({ className = "" }) => {
 
     return (
         <Button
+            data-testid="ProfileLink"
             className={classNames(css.ProfileLink, {}, [className])}
             theme={ButtonTheme.FILL}
             active={active}
@@ -26,7 +26,7 @@ export const ProfileLink: FC<ProfileLinkProps> = ({ className = "" }) => {
         >
             <img
                 className={css.profileLinkImage}
-                src={ProfileImage}
+                src="src/shared/assets/images/default-profile-image.jpg"
                 alt="profile image"
             />
             <ArrowSVG className={css.profileLinkArrow} />
