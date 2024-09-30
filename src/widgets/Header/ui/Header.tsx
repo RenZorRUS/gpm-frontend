@@ -12,7 +12,7 @@ interface HeaderProps {
 
 export const Header: FC<HeaderProps> = ({ className = "" }) => {
     return (
-        <div className={css.headerWrapper}>
+        <div data-testid="Header" className={css.headerWrapper}>
             <div className={classNames(css.Header, {}, [className])}>
                 <Logo />
                 {/*  todo: Implement internal search for users / posts  */}
